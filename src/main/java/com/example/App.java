@@ -1,15 +1,11 @@
-package main.java.com.example;
+public static void main(String[] args) throws Exception {
 
-public class App {
+    Calculator calc = new Calculator();
 
-    public static void main(String[] args) throws Exception {
+    System.out.println(calc.calculate(10, 5, "add-again"));
 
-        Calculator calc = new Calculator();
+    UserService service = new UserService();
 
-        System.out.println(calc.calculate(10, 5, "add"));
-
-        UserService service = new UserService();
-        service.findUser("admin");
-    }
+    service.findUser("admin");
+    service.deleteUser("admin"); // NEW dangerous call
 }
-
